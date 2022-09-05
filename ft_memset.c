@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 15:57:07 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/01 15:31:15 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/05 15:00:40 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,26 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*p;
+	unsigned char	*str;
+	size_t			i;
 
-	p = b;
-	while(len > 0)
+	i = 0;
+	str = (unsigned char *)b;
+	while(i < len)
 	{
-		*p = c;
-		p++;
-		len--;
+		str[i] = c;
+		i++;
 	}
 	return(b);
 }
 
-/*int main()
+/*
+int main(void)
 {
 	char str[50] = "This string.h library function";
-	printf("%s", ft_memset(str, '$', 30));
+	
+	printf("%s", ft_memset(str, '$', 1));
+	
 	return(0);
 }
 */
