@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 14:24:05 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/05 15:06:02 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/05 15:18:14 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/05 16:00:22 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t  i;
+	unsigned int i;
     
     i = 0;
-    while(i < n)
+    while(s1[i] != '\0' && s2[i] != '\0' && i < n)
     {
-        ((unsigned char*)s)[i] = 0;
+        if(s1[i] != s2[i])
+            return(s1[i] - s2[i]);
         i++;
     }
+    if (i != n)
+        return(s1[i] - s2[i]);
+    return(0);
 }
 
 /*
-int main (void)
+int main(void)
 {
-    char str[50] = "this string.h library function";
-    ft_bzero(str, 2);
-    for (int x = 0; x < 50; x++)
-        printf("%c", str[x]);
-    
-    return(0);
+  	char str1[] = "aaaa";
+	char str2[] = "aaa";
+	//	unsigned int nb = 2;
+
+	printf("ft_strncmp: %d ", ft_strncmp(str1, str2, 7));
+//	printf("src: %s ", str1);
+//	printf("Search: %s ",  str2);
+	return (0);
 }
 */
