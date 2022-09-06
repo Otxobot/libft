@@ -24,9 +24,10 @@ int	ft_atoi(const char *str)
 		counter1++;
 	while (str[counter1] == '+' || str[counter1] == '-')
 	{
-		if(str[counter1] == '-')
+		if(str[counter1] == '-'){
 			counter2 *= -1;
 			counter1++;
+		}
 	}
 	while(str[counter1] >= '0' && str[counter1] <= '9')
 	{
