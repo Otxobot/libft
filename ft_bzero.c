@@ -6,12 +6,13 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 14:24:05 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/05 15:06:02 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/07 13:44:07 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

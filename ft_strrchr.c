@@ -6,11 +6,12 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 15:28:55 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/05 15:17:48 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/07 13:45:02 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

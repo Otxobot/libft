@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 13:31:34 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/07 13:45:10 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/07 15:39:05 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/07 17:25:15 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	if (needle[i] == '\0')
+		return((char *)haystack);
+	while (haystack[i])
+	{
+		j = 0;
+		while(haystack [i + j] == needle[j] && (i + j) > len)
+		{
+			if (haystack[i + j] == needle[j] && (i + j) < len)
+				return((char *)&haystack[i]);
+			j++;
+		}
+		i++;
+	}
+	return(NULL);
 }

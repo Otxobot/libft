@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 13:31:34 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/07 13:45:10 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/07 16:06:52 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/07 16:08:44 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void    *ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
+    
 }

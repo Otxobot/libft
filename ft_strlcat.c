@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcatt.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 17:52:18 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/05 17:17:47 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/07 13:58:08 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/07 13:58:10 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *  dest, const char *  src, size_t dstsize)
 {

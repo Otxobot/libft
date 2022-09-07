@@ -6,11 +6,12 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 11:52:22 by abasante          #+#    #+#             */
-/*   Updated: 2022/08/31 15:09:42 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/07 13:44:14 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

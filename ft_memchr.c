@@ -6,12 +6,13 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 17:50:09 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/05 18:29:57 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/07 13:44:29 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 void    *ft_memchr(const void *s, int c, size_t n)
 {
