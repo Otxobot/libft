@@ -1,32 +1,33 @@
 NAME = libft.a
 
-OBJS = ft_atoi.o\
-		ft_bzero.o\
-		ft_isalnum.o\
-		ft_isascii.o\
-		ft_isalpha.o\
-		ft_isdigit.o\
-		ft_isprint.o\
-		ft_memset.o\
-		ft_strchr.o\
-		ft_strlcat.o\
-		ft_strlcpy.o\
-		ft_strlen.o\
-		ft_strncmp.o\
-		ft_strrchr.o\
-		ft_tolower.o\
-		ft_toupper.o\
+SRC = ft_atoi.c\
+		ft_bzero.c\
+		ft_isalnum.c\
+		ft_isascii.c\
+		ft_isalpha.c\
+		ft_isdigit.c\
+		ft_isprint.c\
+		ft_memset.c\
+		ft_strchr.c\
+		ft_strlcat.c\
+		ft_strlcpy.c\
+		ft_strlen.c\
+		ft_strncmp.c\
+		ft_strrchr.c\
+		ft_tolower.c\
+		ft_toupper.c\
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs libft.a $(OBJS)
+$(OBJ): $(SRC) 
+	gcc -c $(CFLAGS) $(SRC)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $<
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
 	rm -rf *.o
@@ -36,4 +37,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re
