@@ -6,11 +6,10 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 17:50:09 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/09 11:25:39 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/09 15:55:13 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
 #include "libft.h"
 

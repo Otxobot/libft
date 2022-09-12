@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoii.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:25:46 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/09 13:25:50 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/12 13:09:27 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int counter1;
-	int counter2;
-	int final;
+	long 			res;
+	long 			sign;
+	unsigned int 	i;
 
-	counter1 = 0;
-	counter2 = 1;
-	final = 0;
-	while ((str[counter1] >= '\t' && str[counter1] <= '\r')
-		|| str[counter1] == ' ')
-		counter1++;
-	while (str[counter1] == '+' || str[counter1] == '-')
+	res = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+	|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+		i++;
+	
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if(str[counter1] == '-')
-		{
-			counter2 *= -1;
-			counter1++;
-		}
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	while(str[counter1] >= '0' && str[counter1] <= '9')
+
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		final = (str[counter1] - '0') + (final * 10);
-		counter1++;
+		res = res * 10 + str[i] - '0';
+		i++;
 	}
-	return(final * counter2);
+	return ((int)(res * sign));
 }

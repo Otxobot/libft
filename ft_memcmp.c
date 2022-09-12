@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 13:58:08 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/12 15:41:14 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/09 13:37:06 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/12 12:04:20 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
-int ft_strlen(const char *str); 
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	dest;
-	size_t	orig;
-	size_t	i;
+	size_t			i;
+	unsigned char	*ps1;
+	unsigned char	*ps2;
 
+	ps1 = (unsigned char *)s1;
+	ps2 = (unsigned char *)s2;
 	i = 0;
-	orig = ft_strlen(src);
-	dest = ft_strlen(dst);
-	if (dstsize == 0 || dstsize <= dest)
+	if (n == 0)
+		return (0);
+	while (*ps1 == *ps2 && ++i < n)
 	{
-		return (dstsize + orig);
+		ps1++;
+		ps2++;
 	}
-	while (i < (dstsize - dest - 1) && src[i])
-	{
-		dst[dest + i] = src[i];
-		i++;
-	}
-	dst[dest + i] = '\0';
-	return (dest + orig);
+	return ((int)(*ps1 - *ps2));
 }
+
+/*
+int main(void)
+{
+	char s1[4] = "hola";
+	char s2[4] = "hola";
+
+	printf("%d", ft_memcmp(s1, s2, 4));
+
+	return(0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 15:57:07 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/07 13:44:43 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/12 15:52:20 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memset(void *b, int c, size_t len)
 		str[i] = c;
 		i++;
 	}
-	return(b);
+	return(str);
 }
 
 /*
