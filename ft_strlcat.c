@@ -6,14 +6,12 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 13:58:08 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/12 15:41:14 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:06:53 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-
-int ft_strlen(const char *str); 
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

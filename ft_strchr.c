@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 15:03:54 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/07 13:44:46 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:07:19 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	*ft_strchr(const char *s, int c)
 	char	*chr;
 
 	chr = (char *)s;
-	while(*chr != c)
+	while (*chr != c)
 	{
-		if(!*chr)
+		if (!*chr)
 			return (NULL);
 		chr++;
 	}
-	return(chr);
+	return (chr);
 }
 
 /*

@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 17:50:09 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/13 12:18:56 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/13 11:36:50 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/13 11:54:52 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	unsigned char		*str;
-	size_t				i;
+	int		cont;
+	char	*s1_new;
+	int		size;
 
-	i = 0;
-	str = (unsigned char *)s;
-	while (i < n)
+	size = ft_strlen (s1);
+	s1_new = malloc (sizeof(char) * size + 1);
+	if (!s1_new)
+		return (NULL);
+	cont = 0;
+	while (s1[cont] != '\0')
 	{
-		if (str[i] == (unsigned char) c)
-			return (str + i);
-		i++;
+		s1_new[cont] = s1[cont];
+		cont++;
 	}
-	return (NULL);
+	s1_new[cont] = s1[cont];
+	return (s1_new);
 }
 
 /*
 int main(void)
 {
-	char s[50] = "This is my string";
-
-	int a;
-
-	a = 'i';
-
-	printf("%s", ft_memchr(s, a, 30));
-
-	return(0);
+	printf ("%s\n", ft_strdup("hola Mundo!!"));
+	printf ("%s\n", strdup("hola Mundo!!"));
+	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:39:05 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/08 11:18:06 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/13 11:56:51 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	if (needle[i] == '\0')
-		return((char *)haystack);
+		return ((char *)haystack);
 	while (haystack[i])
 	{
 		j = 0;
@@ -31,5 +31,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }

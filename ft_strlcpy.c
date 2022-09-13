@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 15:42:21 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/12 16:23:16 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:06:06 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	char	*pt_src;
 
-	pt_src = (char *)src;
-	i = 0;
+pt_src = (char *)src;
+i = 0;
 	if (dstsize > 0)
+	{
+		while (pt_src[i] && i < dstsize - 1)
 		{
-			while (pt_src[i] && i < dstsize - 1)
-			{
-				dst[i] = pt_src[i];
-				i++;
-			}
-			dst[i] = 0;
-		}
-		while (src[i])
+			dst[i] = pt_src[i];
 			i++;
-		return(i);
+		}
+		dst[i] = 0;
+	}
+	while (src[i])
+		i++;
+	return (i);
 }
