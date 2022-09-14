@@ -1,38 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 15:03:54 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:17 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/13 12:43:23 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/13 15:31:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
-{
-	char	*chr;
-
-	chr = (char *)s;
-	while (*chr != (char)c)
-	{
-		if (!*chr)
-			return (NULL);
-		chr++;
-	}
-	return (chr);
-}
-
-/*
-int main(void)
-{
-	char s[50] = "This is my string";
-
-	printf("%s", ft_strchr(s, 'h'));
-	return(0);
-}
-*/
+//char	*ft_substr(char const *s, unsigned int start, size_t len)

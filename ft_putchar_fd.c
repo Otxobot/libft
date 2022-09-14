@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 15:03:54 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:17 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/14 14:55:26 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/14 15:05:44 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <unistd.h>
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*chr;
-
-	chr = (char *)s;
-	while (*chr != (char)c)
-	{
-		if (!*chr)
-			return (NULL);
-		chr++;
-	}
-	return (chr);
+	write(fd, &c, 1);
 }
 
-/*
-int main(void)
-{
-	char s[50] = "This is my string";
+// int main(void)
+// {
+// 	char	c;
+// 	int		fd;
 
-	printf("%s", ft_strchr(s, 'h'));
-	return(0);
-}
-*/
+// 	c = 'M';
+// 	fd = 1;
+// 	ft_putchar_fd(c, fd);
+// }

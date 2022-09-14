@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 15:03:54 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:17 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/14 15:17:19 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/14 15:30:50 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <unistd.h>
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*chr;
+	unsigned int	len;
+	unsigned int	i;
 
-	chr = (char *)s;
-	while (*chr != (char)c)
+	i = 0;
+	len = ft_strlen(s);
+	while (i < len)
 	{
-		if (!*chr)
-			return (NULL);
-		chr++;
+		write (fd, &s[i], 1);
+		i++;
 	}
-	return (chr);
+	write(fd, "\n", 1);
 }
 
-/*
-int main(void)
+int	main(void)
 {
-	char s[50] = "This is my string";
+	char	*c;
+	int		fd;
 
-	printf("%s", ft_strchr(s, 'h'));
-	return(0);
+	c = "MAI";
+	fd = 1;
+	ft_putendl_fd(c, fd);
 }
-*/
