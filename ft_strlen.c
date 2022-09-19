@@ -6,12 +6,13 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 15:52:41 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/07 13:44:57 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/19 16:52:42 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_strlen(const char *str)
 {
@@ -24,3 +25,12 @@ int	ft_strlen(const char *str)
 	}
 	return (n);
 }
+
+// int main(void)
+// {
+// 	char s[50] = "?hola?guapa.?";
+
+// 	printf("%d\n", ft_strlen(s));
+
+// 	return(0);
+// }

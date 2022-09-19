@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 15:57:07 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/19 14:15:14 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/15 13:43:30 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/15 17:36:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+#include <unistd.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*str;
-	size_t			i;
+	unsigned int	nb;
 
-	i = 0;
-	str = (unsigned char *)b;
-	while (i < len)
+	if (n == -2147483648)
 	{
-		str[i] = c;
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	return (str);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = (unsigned int)(n * -1);
+	}
+	else
+	{
+		nb = (unsigned int)(n);
+	}
+	if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+	}
+	ft_putchar_fd((char)(nb % 10 + '0'), fd);
 }
 
 // int main(void)
 // {
-// 	char str[50] = "This string.h library function";
-// 	printf("%s", ft_memset(str, '$', 4));
+// 	int		nmb = 20;
+// 	ft_putnbr_fd(nmb, 1);
 // 	return(0);
 // }
