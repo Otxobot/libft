@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 15:52:41 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/21 15:09:41 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/21 15:34:29 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/21 16:19:27 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_strlen(const char *str)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	n;
+	size_t	i;
 
-	n = 0;
-	while (str[n] != '\0')
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i] != '\0')
 	{
-		n++;
+		f (i, &s[i]);
+		i++;
 	}
-	return (n);
 }
 
-// int main(void)
-// {
-// 	char s[50] = "?hola?guapa.?";
+void	myfunc(unsigned int i, char *string)
+{
+	*string = *string + i;
+}
 
-// 	printf("%d\n", ft_strlen(s));
-
-// 	return(0);
-// }
+/*
+int	main(void)
+{
+	char str[] = "holaagur";
+	printf("string sin modificar: %s\n", str);
+	ft_striteri(str, myfunc);
+	printf("string modificada: %s\n", str);
+	return(0);
+}
+*/

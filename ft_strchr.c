@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 15:03:54 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:17 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/20 16:09:18 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(void)
 {
 	char s[50] = "This is my string";
 
-	printf("%s", ft_strchr(s, 'h'));
+	printf("%s", ft_strchr(s, 'i'));
 	return(0);
 }
 */

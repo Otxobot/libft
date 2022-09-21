@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 15:52:41 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/21 15:09:41 by abasante         ###   ########.fr       */
+/*   Created: 2022/09/19 17:22:10 by abasante          #+#    #+#             */
+/*   Updated: 2022/09/20 16:12:41 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_strlen(const char *str)
+char	*ft_strtrim(const char *s1, char const *set)
 {
-	int	n;
+	size_t	end;
 
-	n = 0;
-	while (str[n] != '\0')
-	{
-		n++;
-	}
-	return (n);
+	if (!s1 || !set)
+		return (0);
+	while (*s1 != '\0' && ft_strchr(set, *s1))
+		s1++;
+	end = ft_strlen(s1);
+	while (end && ft_strchr(set, s1[end]))
+		end--;
+	return (ft_substr(s1, 0, end + 1));
 }
 
-// int main(void)
+// int	main(void)
 // {
-// 	char s[50] = "?hola?guapa.?";
+// 	char a[] = "hola";
+// 	char b[] = "hele";
 
-// 	printf("%d\n", ft_strlen(s));
-
+// 	printf("resultado: %s\n", ft_strtrim(a, b));
 // 	return(0);
 // }

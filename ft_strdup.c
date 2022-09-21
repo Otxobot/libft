@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:36:50 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/13 11:54:52 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/19 18:00:07 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,9 @@ char	*ft_strdup(const char *s1)
 	return (s1_new);
 }
 
-/*
-int main(void)
-{
-	printf ("%s\n", ft_strdup("hola Mundo!!"));
-	printf ("%s\n", strdup("hola Mundo!!"));
-	return (0);
-}
-*/
+// int main(void)
+// {
+// 	printf ("%s\n", ft_strdup("hola Mundo!!"));
+// 	printf ("%s\n", strdup("hola Mundo!!"));
+// 	return (0);
+// }

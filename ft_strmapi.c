@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:54:33 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/19 16:38:43 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:06:40 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,25 +27,30 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (0);
 	while (s[i] != '\0')
 	{
-		str[i] = f(i, s[i]);
+		str[i] = f (i, s[i]);
 		i++;
 	}
 	str[i] = '\0';
 	return (str);
 }
 
-// char	mi_funcion(unsigned int i, char str)
-// {
-// 	i = 32;
-// 	return(str - i);
-// }
-// int main(void)
-// {
-// 	char	*str;
-// 	char	*resultado;
-// 	str = "?hola?guapa.?";
-// 	printf("el resultado es: %s\n", str);
-// 	resultado = ft_strmapi(str, mi_funcion);
-// 	printf("el resultado nuevo es: %s\n", resultado);
-// 	return(0);
-// }
+char	mi_funcion(unsigned int i, char str)
+{
+	if (i % 2 == 0)
+		return (str - 32);
+	else
+		return (str);
+}
+
+/*
+int main(void)
+{
+	char	*str;
+	char	*resultado;
+	str = "?hola?gente.?";
+	printf("el resultado es: %s\n", str);
+	resultado = ft_strmapi(str, mi_funcion);
+	printf("el resultado nuevo es: %s\n", resultado);
+	return(0);
+}
+*/
