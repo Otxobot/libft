@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 13:43:41 by abasante          #+#    #+#             */
-/*   Updated: 2022/09/21 15:55:53 by abasante         ###   ########.fr       */
+/*   Updated: 2022/09/27 10:32:29 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strtrim(const char *s1, char const *set);
+char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 
 #endif

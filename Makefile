@@ -31,6 +31,9 @@ SRC = ft_atoi.c\
 		ft_putnbr_fd.c\
 		ft_strmapi.c\
 		ft_striteri.c\
+		ft_strtrim.c\
+		ft_itoa.c\
+		ft_split.c\
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
