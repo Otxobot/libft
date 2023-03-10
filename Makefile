@@ -35,9 +35,14 @@ SRC = ft_atoi.c\
 		ft_itoa.c\
 		ft_split.c\
 
+SRC_B = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+		ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:%.c=%.o)
+OBJ_B = $(SRC_B:%.c=%.o)
 
 all: $(NAME)
 
@@ -46,6 +51,9 @@ $(OBJ): $(SRC)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
+
+bonus: $(OBJ) $(OBJ_B)
+	ar $(NAME) $(OBJ) $(OBJ_B)
 
 clean:
 	rm -rf *.o
